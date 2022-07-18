@@ -1,10 +1,10 @@
 <template>
-  <div id="app" class="h-screen">
-    <organism-header />
-    <main class="grid sm:grid-cols-4 sm:gap-4">
+  <div id="app" class="flex flex-col min-h-screen">
+    <organism-header class="h-36"/>
+    <main class="flex grow">
       <router-view/>
     </main>
-    <organism-footer />
+    <organism-footer class="flex items-center justify-center h-24"/>
   </div>
 </template>
 
@@ -17,15 +17,12 @@ export default {
   name: 'App',
   components: {
     OrganismHeader,
-    OrganismFooter
+    OrganismFooter,
   }
 }
 </script>
 
 <style lang="scss">
-  #app {
-    background: url('@/assets/forma1.png') no-repeat left top;
-    background-size: contain;
-  }
 
+  
 </style>
